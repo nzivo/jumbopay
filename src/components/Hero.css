@@ -1,0 +1,180 @@
+.hero {
+  background: radial-gradient(
+    120% 100% at 15% 0%,
+    var(--green-600) 0%,
+    var(--green-900) 45%,
+    var(--green-950) 100%
+  );
+  padding: 94px 0 48px;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      600px 400px at 78% 15%,
+      rgba(var(--lime-500-rgb), 0.18),
+      transparent 60%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0 1px,
+      transparent 1px 64px
+    );
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding-top: 56px;
+  padding-bottom: 40px;
+}
+
+.hero-copy h1 {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.4vw, 52px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 20px 0 20px;
+}
+
+.hero-copy p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 460px;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-art {
+  position: relative;
+  height: 460px;
+}
+
+.hero-card {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  width: 300px;
+  background: linear-gradient(135deg, var(--lime-400), var(--lime-500) 60%);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  color: var(--green-950);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+  transform: rotate(6deg);
+}
+
+.hero-card-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-bottom: 30px;
+}
+
+.hero-card-amount {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.hero-card-number {
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-card-holder {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.hero-phone {
+  position: absolute;
+  right: 130px;
+  top: 90px;
+  width: 210px;
+  height: 400px;
+  background: linear-gradient(160deg, var(--green-850), var(--shadow-950));
+  border-radius: 36px;
+  padding: 14px;
+  box-shadow:
+    0 40px 70px -20px rgba(0, 0, 0, 0.6),
+    0 0 0 6px rgba(255, 255, 255, 0.04);
+  transform: rotate(-8deg);
+}
+
+.hero-phone-notch {
+  width: 60px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  margin: 0 auto 14px;
+}
+
+.hero-phone-screen {
+  height: calc(100% - 20px);
+  border-radius: 24px;
+  background: linear-gradient(180deg, var(--green-900), var(--shadow-950));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px;
+}
+
+.phone-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  align-self: flex-end;
+}
+
+.phone-chip.alt {
+  background: var(--lime-500);
+  color: var(--green-950);
+  align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-art {
+    height: 340px;
+  }
+  .hero-card {
+    width: 240px;
+    right: 10px;
+  }
+  .hero-phone {
+    right: 90px;
+    width: 170px;
+    height: 320px;
+  }
+  .hero-copy p {
+    max-width: 100%;
+  }
+}

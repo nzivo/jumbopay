@@ -1,0 +1,122 @@
+.legal-section {
+  padding: 70px 0 90px;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.legal-toc {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legal-toc-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-300);
+  margin-bottom: 10px;
+}
+
+.legal-toc a {
+  font-size: 13.5px;
+  color: var(--ink-500);
+  padding: 7px 0;
+  border-left: 2px solid var(--line-200);
+  padding-left: 14px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.legal-toc a:hover {
+  color: var(--ink-900);
+  border-color: var(--ink-300);
+}
+
+.legal-body {
+  max-width: 680px;
+}
+
+.legal-intro {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink-700);
+  padding-bottom: 28px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line-200);
+}
+
+.legal-doc-section {
+  padding-top: 36px;
+  scroll-margin-top: 110px;
+}
+
+.legal-doc-section:first-of-type {
+  padding-top: 0;
+}
+
+.legal-doc-section h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.legal-doc-section p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-700);
+  margin-bottom: 14px;
+}
+
+.legal-doc-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 4px 0 14px;
+}
+
+.legal-doc-section li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-700);
+}
+
+.legal-doc-section li::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: var(--lime-500);
+}
+
+@media (max-width: 900px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .legal-toc {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .legal-toc a {
+    border-left: none;
+    border: 1px solid var(--line-200);
+    border-radius: 999px;
+    padding: 7px 14px;
+  }
+}

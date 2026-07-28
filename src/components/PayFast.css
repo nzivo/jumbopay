@@ -1,0 +1,176 @@
+.pay-fast {
+  background: var(--white);
+  padding: 90px 0;
+}
+
+.pay-fast-inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.1fr 0.9fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* --- content --- */
+
+.pay-fast-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.2vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 16px 0 16px;
+}
+
+.pay-fast-content > p {
+  color: var(--ink-500);
+  font-size: 14.5px;
+  line-height: 1.7;
+  max-width: 320px;
+  margin-bottom: 26px;
+}
+
+/* --- illustration --- */
+
+.pay-fast-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.pay-fast-glow {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: radial-gradient(circle, var(--lime-100) 0%, rgba(var(--lime-100-rgb), 0) 70%);
+}
+
+.pay-fast-hand {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+}
+
+.pay-fast-hand::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62%;
+  height: 60%;
+  background: linear-gradient(180deg, #f0bd93, #e2a374);
+  border-radius: 50% 50% 0 0 / 65% 65% 0 0;
+}
+
+.pay-fast-card {
+  position: relative;
+  z-index: 2;
+  width: 230px;
+  background: linear-gradient(155deg, var(--green-800), var(--green-950));
+  border-radius: var(--radius-md);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 30px 50px -18px rgba(var(--green-950-rgb), 0.45);
+  transform: rotate(-8deg) translateY(-30px);
+}
+
+.card-toggle {
+  align-self: flex-end;
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.toggle-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--lime-500);
+  margin-left: -6px;
+}
+
+.toggle-dot.ghost {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.pay-fast-card strong {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--lime-500);
+}
+
+.pay-fast-card > span:not(.card-toggle):not(.card-chip) {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.card-chip {
+  width: 26px;
+  height: 20px;
+  margin-top: 18px;
+  border-radius: 5px;
+  background: var(--lime-500);
+}
+
+/* --- feature cards --- */
+
+.pay-fast-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pay-fast-features li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--cream-100);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.pay-fast-features li:first-child {
+  background: var(--lime-100);
+}
+
+.feat-icon {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--green-800);
+  color: var(--lime-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay-fast-features h4 {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.pay-fast-features p {
+  font-size: 12.5px;
+  color: var(--ink-500);
+  line-height: 1.55;
+}
+
+@media (max-width: 1000px) {
+  .pay-fast-inner {
+    grid-template-columns: 1fr;
+  }
+  .pay-fast-art {
+    order: -1;
+  }
+}

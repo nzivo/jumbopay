@@ -1,0 +1,72 @@
+.page-hero {
+  background: radial-gradient(
+    120% 100% at 15% 0%,
+    var(--green-600) 0%,
+    var(--green-900) 45%,
+    var(--green-950) 100%
+  );
+  padding: 156px 0 72px;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+}
+
+.page-hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px 400px at 78% 0%, rgba(var(--lime-500-rgb), 0.18), transparent 60%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 64px);
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.page-hero-inner .eyebrow {
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.6vw, 48px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  max-width: 640px;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.page-hero-crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.page-hero-crumb a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.page-hero-crumb a:hover {
+  color: var(--lime-500);
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 130px 0 56px;
+  }
+}
