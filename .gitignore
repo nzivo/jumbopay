@@ -37,3 +37,6 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/
+
+# README (local only)
+README.md
